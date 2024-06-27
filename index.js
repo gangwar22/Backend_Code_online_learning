@@ -15,7 +15,9 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf.mongodb.net/Gofoodmern?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", { 
+  dbName:"Online_Learning" 
+})
   .then(() => {
     console.log("MongoDB connected");
   })
