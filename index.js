@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const router = require('./CreateUser')
-const routers = require('./loginuser')
+const createUserRouter = require('./CreateUser.js');
+const loginUserRouter = require('./LoginUser.js');
 
 const app = express();
 const port = 3000;
@@ -21,8 +21,8 @@ mongoose.connect("mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf
   })
   .catch(err => console.error("MongoDB connection error:", err));
 
-app.use('/', router);
-app.use('/', routers);
+app.use('/api', createUserRouter);
+app.use('/api', loginUserRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
