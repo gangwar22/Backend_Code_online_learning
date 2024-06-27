@@ -6,7 +6,7 @@ const createUserRouter = require('./CreateUser.js');
 const loginUserRouter = require('./UserLogin');
 
 const app = express();
-const port = 3000;
+const port = 5050;
 
 app.use(cors({
   origin: true,
