@@ -15,7 +15,6 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 
-const mongoose = require('mongoose');
 
 const uri = 'mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf.mongodb.net/Online_Learning?retryWrites=true&w=majority';
 
