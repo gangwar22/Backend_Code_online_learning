@@ -1,7 +1,6 @@
 import User from './User.js'
 import { createToken } from './middleware.js';
 import bcrypt from 'bcrypt';
-const salt = 10
 
 
 
