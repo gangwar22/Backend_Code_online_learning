@@ -6,6 +6,8 @@ const createToken = (email)=>{
     return jwt.sign({email},JWT_SECRET , {expiresIn:'1h'})
 }
 
+
+//verifyToken
 const verifyToken = async (req, res, next) => {
 
     const token = req.cookies.token;
