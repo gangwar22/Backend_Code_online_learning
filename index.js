@@ -15,10 +15,10 @@ app.use(cors({
 app.use(bodyParser.json());
 app.use('/', router)
 
-//url
-const uri = 'mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf.mongodb.net/Gofoodmern?retryWrites=true&w=majority';
 
-mongoose.connect(uri, {
+//url
+
+mongoose.connect(`mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf.mongodb.net/Gofoodmern?retryWrites=true&w=majority&appName=Cluster0`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
