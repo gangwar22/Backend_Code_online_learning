@@ -41,17 +41,18 @@ const login = async (req, res) => {
         // Check if password matches
         const isMatch = await bcrypt.compare(password, user.password);
         if (isMatch) {
-            const token = createToken(email)
-            res.cookie('token', token)
-            res.status(200).json({ message: "user login successfully..", token })
+            const token = createToken(email);
+            res.cookie('token', token);
+            res.status(200).json({ message: "user login successfully..", token });
         } else {
             return res.status(401).json({ message: 'invalid password..' });
         }
     } catch (error) {
         console.error(error.message);
         res.status(500).send('Server Error');
-    }
+    }
 };
+
 
 
 const viewUser = async(req , res) =>{
