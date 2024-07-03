@@ -18,6 +18,7 @@ app.use('/', router)
 
 //url
 
+// const dbURI = 'mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf.mongodb.net/Gofoodmern?retryWrites=true&w=majority&appName=Cluster0';
 const dbURI = 'mongodb+srv://rahulgangwar22:Pcs6QGJe8GOObB59@cluster0.sbksrzf.mongodb.net/Gofoodmern?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
